@@ -10,4 +10,4 @@ The folder has to be loaded before any other SB-Addons are loaded. Otherwise the
 
 ## MySQL
 The MySQL handler is one of the main reasons to install this addon (except from the code loader which will be needed for all SB-Addons).\
-To see how to configure it go to _benlib/data/_benlib/mysql.json\
+To see how to configure it go to _benlib/data/_benlib/mysql.json
