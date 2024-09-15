@@ -1,0 +1,14 @@
+{
+	"base": {
+		"Address": "db.suchtbunker.de",
+		"User": "gmod_darkrp_base",
+		"Password": ":d^Ek6>Rrhd}@Px}sHBc",
+		"Database": "gmod_darkrp"
+	},
+	"logs": {
+		"Address": "db.suchtbunker.de",
+		"User": "gmod_darkrp_logs",
+		"Password": "y#F6WxZ_u5kCCnnksoie",
+		"Database": "gmod_darkrp_logs"
+	}
+}
