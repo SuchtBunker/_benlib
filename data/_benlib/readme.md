@@ -6,13 +6,13 @@
 
 ## Config schema
 ```
-{ 								<- Connections List
-	"Identifier": { 			<- Database identifier (used as DB if no Database is specified)
+{ 					<- Connections List
+	"Identifier": { 		<- Database identifier (used as DB if no Database is specified)
 		"Address": "XXXXXX", 	<- DB-Server Address
-		"User": "XXXXXX", 		<- DB-User Name
+		"User": "XXXXXX", 	<- DB-User Name
 		"Password": "XXXXXX",	<- DB-User Password
 		"Database": "XXXXXX"	<- Database Name (optional)
-		"Port": 00000,			<- Database Port (optional)
+		"Port": 00000,		<- Database Port (optional)
 	}
 }
 ```
