@@ -1,6 +1,6 @@
 -- [[ THIS CODE IS WRITTEN BY BENN20002 (76561198114067146) DONT COPY OR STEAL! ]] -- 
 
-ENT.Base = "easyent_base"
+ENT.Base = "_benlib_npc"
 ENT.Type = "ai" 
 
 ENT.Category = "NPCs"

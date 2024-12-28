@@ -1,5 +1,5 @@
 
-ENT.Base = "easyent_base"
+ENT.Base = "_benlib_ent"
 ENT.Type = "anim"
 
 ENT.Spawnable = false

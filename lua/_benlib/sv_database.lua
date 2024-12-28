@@ -32,6 +32,11 @@ function _benlib.AddDB(mod, id)
 		conTab = Database.Connections[id]
 	else
 		local cred = Database.Credentials[id]
+		if !cred then
+			_benlib.Print("Could not find credentials for "..id.."!")
+			return	
+		end
+
 		local con = mysqloo.connect(
 			cred["Address"],
 			cred["User"],
