@@ -15,6 +15,12 @@ hook.Fast = hook.Fast or {}
 local Fast = hook.Fast
 hook.Slow = hook.Slow or {}
 local Slow = hook.Slow
+hook.Legacy = hook.Legacy or {}
+local Legacy = hook.Legacy
+
+function hook.GetTable()
+	return hook.Legacy
+end
 
 function hook.Add(name,id,func)
 	hook.Remove(name,id)
@@ -34,6 +40,13 @@ function hook.Add(name,id,func)
 		Slow[name] = tS
 	end
 	tS[id] = t
+	
+	local tL = Legacy[name]
+	if !tL then
+		tL = {}
+		Legacy[name] = tL
+	end
+	tL[id] = func
 end
 
 function hook.Remove(name,id)
@@ -49,7 +62,9 @@ function hook.Remove(name,id)
 	if #tF == 0 then
 		Fast[name] = nil
 		Slow[name] = nil
+		Legacy[name] = nil
 	else
+		Legacy[name][id] = nil
 		tS[id] = nil
 	end
 end
