@@ -24,6 +24,10 @@ end
 
 function hook.Add(name,id,func)
 	hook.Remove(name,id)
+	if (!func) then
+		print("Invalid function passed to hook.Add! Please check your code. (",name,": ",id,")")
+		return
+	end
 
 	local t = {func,!isstring(id) and id or false}
 
