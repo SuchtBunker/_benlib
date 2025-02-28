@@ -2,7 +2,7 @@
 
 function _benlib.DrawFloatingText(ent, text, offset)
 	local entPos = ent:GetPos()
-	if entPos:DistToSqr(LocalPlayer():GetPos()) > HUD.TargetIDRange then return end
+	if entPos:DistToSqr(LocalPlayer():GetPos()) > _benlib.TargetIDRange then return end
 
 	local upPos = ent:GetUp()
 	upPos:Mul(offset)
