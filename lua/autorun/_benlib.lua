@@ -2,6 +2,7 @@
 
 _benlib = {}
 _benlib.ServerPrefix = "RP_TEST_"
+_benlib.TargetIDRange = 300^2
 
 local test
 function test()

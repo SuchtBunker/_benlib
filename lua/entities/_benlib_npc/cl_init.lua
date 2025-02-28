@@ -3,11 +3,10 @@
 include("shared.lua")
 
 function ENT:DrawTranslucent()
-	HUD.NPCPaint.Draw(self,self.Title,77.5)
+	_benlib.DrawFloatingText(self, self.Title, 77.5)
 end
 
 function ENT:Draw()
-	
 	if self["Clothes"] then
 		local rag = self["Rag"]
 		if !IsValid(rag) then
