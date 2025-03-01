@@ -33,17 +33,24 @@ function meta:MakeMaterial(shader,uid,kv)
 			mat = Material("../data/"..self:FilePath())
 		else*/
 			// Create a unique file for this material (https://github.com/Facepunch/garrysmod-issues/issues/3341#issuecomment-485208075)
+			// update: this seems to be fixed by now (https://github.com/Facepunch/garrysmod-issues/issues/3103#issuecomment-723267351)
+			/*
 			local tempFileName = "textures/"..self["FileName"].."_"..id.."_"..renderID.."."..self["Extension"]
 			file.Write(tempFileName,file.Read(self:FilePath()))
 			Material("../data/"..tempFileName)
-
-			// Create the material
 			local kv = kv or {}
 			kv["$basetexture"] = "../data/"..tempFileName
 			mat = CreateMaterial("CUSTOM_TEXTURE_"..id.."_"..renderID,shader,kv)
-
 			file.Delete(tempFileName)
+			*/
 		//end
+		
+		// Create the material
+		local kv = kv or {}
+		local dataPath = "../data/"..self:FilePath()
+		Material(dataPath)
+		kv["$basetexture"] = dataPath
+		mat = CreateMaterial("CUSTOM_TEXTURE_"..id.."_"..renderID,shader,kv)
 	end
 
 	self["Cache"][uid] = mat
