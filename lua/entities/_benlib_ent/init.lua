@@ -14,7 +14,7 @@ function meta:SetPlayer(ply)
 	self["Owner"] = ply
 
 	local class = self:GetClass()
-	if PropProtection.TouchableClasses[class] or PropProtection.SyncOwnerClasses[class] then
+	if PropProtection and (PropProtection.TouchableClasses[class] or PropProtection.SyncOwnerClasses[class]) then
 		self:SetDTInt(25,self["OwnerID"])
 	end
 end
