@@ -62,6 +62,9 @@ function ENT:SpawnFunction( ply, tr, ClassName )
 	ent:SetCreator( ply )
 	ent:SetPos( SpawnPos )
 	ent:SetAngles( SpawnAng )
+	if (ent.Setowning_ent) then
+		ent:Setowning_ent(ply)
+	end
 	ent:Spawn()
 	ent:Activate()
 
